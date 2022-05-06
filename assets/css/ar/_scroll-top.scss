@@ -1,0 +1,36 @@
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 5vw;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+    transition: all 1s ease;
+    z-index: 2;
+    @media(min-width:900px){
+        bottom: 15px;
+    }
+    @media screen and (max-width: 479px){
+        left: 24px;
+    }
+    @media screen and (min-width: 1920px){
+        left: 8vw;
+    }
+    &:hover{
+        background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        svg{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+

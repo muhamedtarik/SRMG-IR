@@ -1,0 +1,1 @@
+var OldBrowser=/iPhone|iPad|Android|chrome.76|firefox.87|safari.12/i.test(navigator.userAgent);if(!OldBrowser){const scroll=new LocomotiveScroll({el:document.querySelector('[data-scroll-container]'),smooth:true,lerp:0.03,multiplier:1.3,reloadOnContextChange:true,touchMultiplier:2,smoothMobile:0,smartphone:{smooth:!0,breakpoint:767},tablet:{smooth:!0,breakpoint:991},});}

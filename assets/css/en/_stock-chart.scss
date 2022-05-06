@@ -1,0 +1,96 @@
+.stock-chart{
+    
+    border-radius: unset;
+    width: 100%;
+    margin-bottom: 70px;
+    &__title{
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: normal;
+        color: $black;
+        border-bottom: 1px solid $gray;
+        padding: 5px 5px;
+        background-color: $headerBG;
+        @media(min-width:371px) and (max-width:400px){
+            font-size: 21px;
+          }
+        @media(max-width:370px){
+            font-size: 6vw;
+          }
+    }
+    &__data{
+        &__title{
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 25px;
+            color: $black;
+            text-align: center;
+            padding-bottom: 5px;
+            @media(max-width:370px){
+                font-size: 5vw;
+                line-height: unset;
+              }
+        }
+    }
+    &__details{ 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @media(min-width:900px)and (max-width:1050px){
+            display: block;
+        }
+        @media(max-width:650px){
+            display: block;
+        }
+        span{
+            font-size: 18px;
+        }
+        &__title{
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+            font-size: 13px;
+            @media(max-width:650px){
+                display: block;
+                margin-right: 0px;
+            }
+            @media(min-width:900px)and (max-width:1050px){
+                display: block;
+                margin-bottom: 5px;
+            }
+            &:last-child{
+                margin-right: 0px;
+                @media(max-width:650px){
+                    margin-bottom: 0px;
+                }
+                @media(min-width:900px)and (max-width:1050px){
+                    margin-bottom: 0px;
+                }
+            }
+            &__company{
+                display: flex;
+                align-items: center;
+                margin-right: 5px;
+                line-height: 30px;
+                @media(max-width:370px){
+                    line-height: unset;
+                }
+                span{
+                    font-weight: bold;
+                    display: block;
+                    @media(max-width:370px){
+                        font-size: 4.5vw;
+                    }
+                }
+            }
+            &__data{
+                font-size: 16px;
+                @media(max-width:370px){
+                    font-size: 3.55vw;
+                }
+            }
+        }
+    }
+}

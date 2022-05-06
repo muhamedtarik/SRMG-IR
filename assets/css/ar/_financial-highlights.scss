@@ -1,0 +1,112 @@
+.financial-highlights {
+	width: 100%;
+	color: $black;
+	border-bottom: 1px solid $gray;
+	padding-bottom: 15px;
+	margin-bottom: 70px;
+	&--title {
+		margin-bottom: 15px;
+		font-weight: bold;
+		font-size: 23px;
+		line-height: normal;
+		color: $black;
+		border-bottom: 1px solid $gray;
+		padding: 5px 5px;
+		background-color: $headerBG;
+		@media (min-width: 371px) and (max-width: 400px) {
+			font-size: 21px;
+		}
+		@media (max-width: 370px) {
+			font-size: 6vw;
+		}
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		&__content {
+			width: calc(33.33% - 24px);
+			@media (max-width: 1150px) {
+				width: 100%;
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+			&--title {
+				border-bottom: 1px solid $gray;
+				padding-bottom: 3px;
+				font-weight: bold;
+				text-align: center;
+				font-size: 18px;
+				margin-top: 6px;
+				@media (min-width: 351px) and (max-width: 1120px) {
+					font-size: 16px;
+				}
+				@media (max-width: 1150px) {
+					text-align: right;
+					margin-top: 0px;
+				}
+				@media (max-width: 352px) {
+					font-size: 4vw;
+				}
+			}
+			ul {
+				padding: 0;
+				list-style-type: unset;
+				margin-bottom: 0px;
+				li {
+					display: flex;
+					justify-content: space-between;
+					margin-top: 20px;
+					.financial-highlights__container__content__info {
+						&:nth-child(2) {
+							border-left: none;
+						}
+					}
+					@media (max-width: 1150px) {
+						text-align: unset;
+						padding: 10px 0px 0px 0px;
+						margin-top: 0px;
+					}
+				}
+			}
+			&__info {
+				text-align: center;
+				width: 50%;
+				border-left: 1px dashed #a6a6a6;
+				@media (max-width: 1150px) {
+					&:first-child {
+						text-align: right;
+					}
+					&:nth-child(2) {
+						text-align: left;
+					}
+				}
+				&--data {
+					color: #7f7f7f;
+					font-weight: bold;
+					font-size: 18px;
+					margin-top: 20px;
+					@media (min-width: 351px) and (max-width: 1120px) {
+						font-size: 16px;
+					}
+					@media (max-width: 352px) {
+						font-size: 4vw;
+					}
+				}
+				&--price {
+					font-size: 12px;
+					color: #7f7f7f;
+					font-style: italic;
+					@media (min-width: 992px) and (max-width: 1100px) {
+						font-size: 11px;
+					}
+					@media (max-width: 352px) {
+						font-size: 3vw;
+					}
+				}
+			}
+		}
+	}
+}

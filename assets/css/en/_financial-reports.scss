@@ -1,0 +1,311 @@
+.financial-reports{
+    width: 100%;
+    border-radius: unset;
+    color: $black;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $gray;
+    &__header{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $gray;
+        padding: 5px 5px;
+        background-color: $headerBG;
+        margin-bottom: 15px;
+        @media(max-width:991px){
+            justify-content: space-between;
+        }
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 23px;
+        line-height: normal;
+        color: $black;
+        margin-right: 25px;
+        @media(max-width:991px){
+            margin-right: 0px;
+        }
+        @media(min-width:371px) and (max-width:400px){
+            font-size: 21px;
+          }
+        @media(max-width:370px){
+            font-size: 6vw;
+          }
+    }
+    &__select{
+        position: relative;
+        width: fit-content;
+        &__btn{
+            color: $white;
+            background-color: $black;
+            font-weight: bold;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            box-sizing: border-box;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            @media(max-width:350px){
+                font-size: 4vw;
+                padding: 1.5vw 4vw;
+            }
+            &.toggle{
+                border-radius: 3px 3px 0 0;
+            }
+            &.toggle::after{
+                -webkit-transform: translateY(-50%) rotate(-135deg);
+                transform: translateY(-50%) rotate(-135deg);
+            }
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     background: url(../../images/down-chevron.svg) center center/cover;
+            //     top: 14px;
+            //     right: 15px;
+            //     width: 10px;
+            //     height: 10px;
+            //     font-size: 12px;
+            //     transition: 0.2s ease;
+            //     filter: invert(100%);
+            // }
+        }
+        &__dropdown{
+                position: absolute;
+                background-color: $white;
+                top: 0;
+                width: 100%;
+                overflow: hidden;
+                z-index: 3;
+                background-color: $white;
+                -webkit-transform: scale(1, 0);
+                transform: scale(1, 0);
+                -webkit-transform-origin: top center;
+                transform-origin: top center;
+                visibility: hidden;
+                transition: all 0.1s;
+                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+                max-height: 250px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    width: 0.1em;
+                  }
+                   
+                &::-webkit-scrollbar-track {
+                    box-shadow: unset;
+                  }
+                   
+                &::-webkit-scrollbar-thumb {
+                    background-color: $black;
+                    outline: unset;
+                  }
+            &__option {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 5px 0px;
+                transition: all 0.2s;
+                @media(max-width:350px){
+                    font-size: 4vw;
+                    padding: 1.5vw 0;
+                }
+                &.active{
+                    font-weight: bold;
+                    background-color: $black;
+                    color: $white;
+                }
+                &:hover{
+                    background-color: $black;
+                    color: $white;
+                }
+                i{
+                    display: block;
+                    font-size: 5px;
+                    margin-right: 3px;
+                }
+            }
+            &.toggle{
+                visibility: visible;
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__item{
+        // background: url(../../images/fr1.jpg) center center/cover;
+        width: calc(25% - 11.45px);
+        height: 21vw;
+        margin-right: 15px;
+        margin-top: 15px;
+        position: relative;
+        overflow: hidden;
+        @media(max-width:991px){
+            height: 30vw;
+        }
+        @media(max-width:767px){
+            height: 34vw;
+        }
+        @media(max-width:479px){
+            width: 100%;
+            margin-right: 0px;
+            height: 90vw;
+        }
+        &::before{
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
+            background-image: url(../../images/financia-report1-min.png);
+            background-size: cover;
+            background-position: center center;
+        }
+        &::after{
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            // background-color: rgba($color: $black, $alpha: 0.5);
+
+        }
+        // &:hover:before{
+        //     transform: scale(1.2);
+        // }
+        &:nth-child(-n+4){
+            margin-top: 0px;
+            @media(max-width:479px){
+                margin-top: 15px;
+            }
+        }
+        &:nth-child(4n){
+            margin-right: 0px;
+        }
+        &:first-child{
+            @media(max-width:479px){
+                margin-top: 0px;
+            }
+        }
+        &:nth-child(2){
+            &::before{
+                background: url(../../images/financial-report2-min.png) center center/cover;
+            }
+        }
+        &:nth-child(3){
+            &::before{
+                background: url(../../images/financial-report3-min.png) center center/cover;
+            }
+        }
+        &:nth-child(4){
+            &::before{
+                background: url(../../images/financial-report4-min.png) center center/cover;
+            }
+        }
+        &:nth-child(5){
+            &::before{
+                background: url(../../images/fr5.jpg) center center/cover;
+            }
+        }
+        &:nth-child(6){
+            &::before{
+                background: url(../../images/fr6.jpg) center center/cover;
+            }
+        }
+        &__links{
+            text-align: right;
+            padding-top: 10px;
+            padding-right: 10px;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            &__link{
+                background-color: lightgray;
+                color: $white;
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px;
+                @media(max-width:370px){
+                    font-size: 4vw;
+                }
+                &:first-child{
+                    margin-right: 5px;
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+        &__data{
+            color: $white;
+            position: absolute;
+            z-index: 2;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            margin-bottom: 16px;
+            @media(max-width:991px){
+                left: 8px;
+                right: 8px;
+                bottom: 8px;
+            }
+            @media(max-width:479px){
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+            }
+            &__title{
+                    margin-bottom: 16px;
+                    font-size: 0.8vw;
+                    @media(max-width:991px){
+                        font-size: 1vw;
+                    }
+                    @media(max-width:767px){
+                        font-size: 1.6vw;
+                    }
+                    @media(max-width:479px){
+                        font-size: 2.6vw;
+                        line-height: 140%;
+                    }
+            }
+            &__details{
+                font-size: 1.8vw;
+                line-height: 110%;
+                letter-spacing: 0.3px;
+                @media(min-width:1250px){
+                    font-size: 22px;
+                }
+                @media(max-width:767px){
+                    font-size: 2.6vw;
+                }
+                @media(max-width: 479px){
+                    font-size: 5.4vw;
+                }
+            }
+        }
+    }
+    &__overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $black, $alpha: 0.6);
+    }
+}  

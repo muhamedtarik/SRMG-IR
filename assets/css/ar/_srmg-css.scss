@@ -1,0 +1,28 @@
+.paginate--wrapper nav .flex{
+  display: none;
+}
+.paginate--wrapper nav div:nth-child(1){
+  margin-top: 35px;
+}
+.paginate--wrapper nav div:nth-child(2) div:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginate--wrapper nav div:nth-child(2) div:nth-child(2) span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginate--wrapper nav div:nth-child(2) div:nth-child(2) span span{
+  margin: 0px;
+}
+.paginate--wrapper nav div:nth-child(2) div:nth-child(2) a, .paginate--wrapper nav div:nth-child(2) div:nth-child(2) span{
+  margin: 10px;
+}
+/* span[aria-disabled="true"]{
+  margin: 10px;
+} */
+.paginate--wrapper nav div:nth-child(2) div:nth-child(2) span svg{
+  width: 10px;
+}
